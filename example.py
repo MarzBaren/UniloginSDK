@@ -1,4 +1,4 @@
-from unilogin import MINUDDANNELSE_LOGIN_URL, login
+from unilogin import MINUDDANNELSE_LOGIN_URL, Unilogin
 
 def get_minuddannelse_name(ses):
 
@@ -13,6 +13,6 @@ def get_minuddannelse_name(ses):
 username = "<username>" #fx. mikk3716
 password = "<password>"
 
-ses, latest_request = login(username, password, MINUDDANNELSE_LOGIN_URL)
+ses, latest_request = Unilogin(username, password, MINUDDANNELSE_LOGIN_URL)
 print( get_minuddannelse_name(ses) )
 
